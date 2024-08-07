@@ -3,6 +3,8 @@ const firstOption = document.querySelector("#firstCurrencyOption");
 const secondOption = document.querySelector("#secondCurrencyOption");
 const resultInput = document.querySelector("#result");
 
+const currency = new Currency();
+
 runEventListeners();
 
 function runEventListeners() {
@@ -16,5 +18,4 @@ function exchange() {
 
   const secondOptionValue =
     secondOption.options[secondOption.selectedIndex].textContent;
-  console.log(firstOptionValue, secondOptionValue);
 }
