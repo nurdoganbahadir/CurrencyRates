@@ -18,4 +18,10 @@ function exchange() {
 
   const secondOptionValue =
     secondOption.options[secondOption.selectedIndex].textContent;
+
+  currency
+    .exchange(amount, firstOptionValue, secondOptionValue)
+    .then((result) => {
+      resultInput.value = result.toFixed(3);
+    });
 }
